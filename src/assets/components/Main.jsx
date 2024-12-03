@@ -105,19 +105,21 @@ export default function Main() {
 
       <div className="container">
         {/* Filter Post */}
-        <section className="d-flex justify-content-center my-4">
-          <form role="search">
-            <div className="form-floating">
-              <input
-                type="search"
-                className="form-control"
-                placeholder="Search..."
-                value={filterInput}
-                onChange={(e) => setFilterInput(e.target.value)}
-              />
-              <label>Search...</label>
-            </div>
-          </form>
+        <section className="row my-4">
+          <div className="col-3">
+            <form role="search">
+              <div className="form-floating">
+                <input
+                  type="search"
+                  className="form-control"
+                  placeholder="Search..."
+                  value={filterInput}
+                  onChange={(e) => setFilterInput(e.target.value)}
+                />
+                <label>Search...</label>
+              </div>
+            </form>
+          </div>
         </section>
 
         <PostList
