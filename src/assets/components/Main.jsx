@@ -120,14 +120,11 @@ export default function Main() {
           </form>
         </section>
 
-        {/* Posts Output */}
-        <section className="d-flex flex-column gap-3 my-4">
-          <PostList
-            postList={posts}
-            filteringTerm={filterInput}
-            handleClick={handleClick}
-          />
-        </section>
+        <PostList
+          postList={posts}
+          filteringTerm={filterInput}
+          handleClick={handleClick}
+        />
       </div>
     </main>
   );
