@@ -1,37 +1,42 @@
 export const posts = [
   {
-    title: "First Title",
-    content: "This is the first content.",
+    title: "Understanding JavaScript Closures",
+    content:
+      "Closures are an important concept in JavaScript, allowing functions to access variables from their scope even after the scope has been closed.",
     id: 1,
-    status: "draft",
-    author: "Author A",
+    status: "published",
+    author: "John Doe",
   },
   {
-    title: "Second Title",
-    content: "This is the second content.",
+    title: "A Guide to Responsive Web Design",
+    content:
+      "Learn the principles of responsive design to create websites that look great on any device.",
     id: 2,
-    status: "published",
-    author: "Author B",
+    status: "draft",
+    author: "Jane Smith",
   },
   {
-    title: "Third Title",
-    content: "This is the third content.",
+    title: "Exploring CSS Grid Layout",
+    content:
+      "CSS Grid is a powerful tool for creating two-dimensional layouts on the web. This guide covers the basics and advanced techniques.",
     id: 3,
-    status: "draft",
-    author: "Author C",
-  },
-  {
-    title: "Fourth Title",
-    content: "This is the fourth content.",
-    id: 4,
     status: "published",
-    author: "Author D",
+    author: "Chris Johnson",
   },
   {
-    title: "Fifth Title",
-    content: "This is the fifth content.",
-    id: 5,
+    title: "The Importance of Web Accessibility",
+    content:
+      "Ensuring your website is accessible is crucial for reaching a wider audience and complying with legal standards.",
+    id: 4,
     status: "draft",
-    author: "Author E",
+    author: "Emily Davis",
+  },
+  {
+    title: "Introduction to React Hooks",
+    content:
+      "React Hooks simplify state management and side effects in functional components. This article explains how to use them effectively.",
+    id: 5,
+    status: "published",
+    author: "Michael Brown",
   },
 ];

@@ -1,9 +1,18 @@
 import { useState } from "react";
 import { posts } from "./assets/data/posts";
 import PostList from "./assets/components/PostList";
-function handleSubmit() {}
 
 function App() {
+  const [inputValue, setInputValue] = useState("");
+
+  function handleChange(e) {
+    setInputValue(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
   return (
     <>
       <header>
@@ -13,22 +22,22 @@ function App() {
         <section>
           <form
             onSubmit={handleSubmit}
-            className="d-flex justify-content-center my-3 gap-3"
+            className="d-flex justify-content-center my-4"
           >
             <div className="form-floating">
               <input
                 type="text"
                 className="form-control"
-                id="inputText"
-                placeholder="First Title"
+                placeholder="Ex. Javascript"
+                value={inputValue}
+                onChange={handleChange}
               />
-              <label htmlFor="inputText">First Title</label>
+              <label htmlFor="inputText">Ex. Javascript</label>
             </div>
-            <button className="btn btn-primary">Filtra</button>
           </form>
         </section>
         <section className="container d-flex flex-column gap-3 mt-5">
-          <PostList postList={posts} />
+          <PostList postList={posts} filteringTerm={inputValue} />
         </section>
       </main>
     </>
