@@ -4,7 +4,7 @@ export default function Post({ post, handleClick }) {
   const [newTitleInput, setNewTitleInput] = useState("");
   function handleEditClick(e) {
     e.preventDefault();
-
+    if (!newTitleInput) return;
     post.title = newTitleInput;
     setNewTitleInput("");
   }
@@ -33,7 +33,7 @@ export default function Post({ post, handleClick }) {
                   className="btn btn-secondary ms-1"
                   onClick={handleEditClick}
                 >
-                  Edit Title
+                  <i className="fa-solid fa-pen-to-square fs-5"></i>
                 </button>
               </div>
             </form>
@@ -44,7 +44,7 @@ export default function Post({ post, handleClick }) {
                 className="btn btn-danger shadow"
                 onClick={() => handleClick(post.id)}
               >
-                Delete
+                <i className="fa-regular fa-trash-can text-dark fa-xl"></i>
               </button>
             </div>
           </div>
