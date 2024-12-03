@@ -23,8 +23,13 @@ export default function Main() {
       id: posts.length + 1,
     };
     const newPosts = [...posts, newPost];
+
     setPosts(newPosts);
-    console.log(newPosts);
+
+    setTitleInput("");
+    setAuthorInput("");
+    setStatusInput("");
+    setContentInput("");
   }
 
   return (
@@ -111,7 +116,7 @@ export default function Main() {
         </section>
 
         {/* Posts Output */}
-        <section className="d-flex flex-column gap-3">
+        <section className="d-flex flex-column gap-3 my-4">
           <PostList postList={posts} filteringTerm={filterInput} />
         </section>
       </div>
