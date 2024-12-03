@@ -12,6 +12,11 @@ export default function Main() {
 
   const [posts, setPosts] = useState(data);
 
+  function handleClick(id) {
+    const newPosts = posts.filter((post) => post.id !== id);
+    setPosts(newPosts);
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -117,7 +122,11 @@ export default function Main() {
 
         {/* Posts Output */}
         <section className="d-flex flex-column gap-3 my-4">
-          <PostList postList={posts} filteringTerm={filterInput} />
+          <PostList
+            postList={posts}
+            filteringTerm={filterInput}
+            handleClick={handleClick}
+          />
         </section>
       </div>
     </main>
