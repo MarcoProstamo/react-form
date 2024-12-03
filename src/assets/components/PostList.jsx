@@ -5,5 +5,5 @@ export default function PostList({ postList, filteringTerm }) {
     .filter((post) =>
       post.title.toLowerCase().includes(filteringTerm.toLowerCase())
     )
-    .map((post) => <Post post={post} />);
+    .map((post) => <Post key={post.id} post={post} />);
 }
